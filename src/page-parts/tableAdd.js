@@ -1,61 +1,30 @@
 import { memo } from "react";
-import {
-  Table,
-  Thead,
-  Tbody,
-  Tfoot,
-  Tr,
-  Th,
-  Td,
-  TableCaption,
-  Center,
-  Box,
-  CloseButton,
-} from "@chakra-ui/react";
+import { Center, Box } from "@chakra-ui/react";
+import { useUserBookContext } from "../context/userBookContext";
+import { View } from "./View";
 
 export const Tableadd = memo(() => {
+  const { books } = useUserBookContext();
   return (
     <Center mt="80px" mb="200px">
       <Box w={{ base: "100%", md: "800px" }}>
-        <Table
-          fontSize={{ base: "10px", md: "15px" }}
-          variant="striped"
-          colorScheme="blue"
-        >
-          <Thead>
-            <Tr>
-              <Th>タイトル</Th>
-              <Th>著者</Th>
-              <Th>評価</Th>
-            </Tr>
-          </Thead>
-          <Tbody>
-            <Tr>
-              <Td>1からの流通論</Td>
-              <Td>岸本哲也</Td>
-              <Td>星</Td>
-              <Td>
-                <CloseButton color="whiteAlpha.700" size="lg" bg="gray.300" />
-              </Td>
-            </Tr>
-            <Tr>
-              <Td>1からの流通論</Td>
-              <Td>岸本哲也</Td>
-              <Td>星</Td>
-              <Td>
-                <CloseButton color="whiteAlpha.700" size="lg" bg="gray.300" />
-              </Td>
-            </Tr>
-            <Tr>
-              <Td>1からの流通論</Td>
-              <Td>岸本哲也</Td>
-              <Td>星</Td>
-              <Td>
-                <CloseButton color="whiteAlpha.700" size="lg" bg="gray.300" />
-              </Td>
-            </Tr>
-          </Tbody>
-        </Table>
+        {books.length > 0 && (
+          <>
+            <View />
+          </>
+        )}
+        <div>
+          {books.length < 1 && (
+            <div
+              style={{
+                textAlign: "center",
+                fontSize: "24px",
+              }}
+            >
+              本がありません追加してください
+            </div>
+          )}
+        </div>
       </Box>
     </Center>
   );

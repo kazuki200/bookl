@@ -4,24 +4,20 @@ import {
   Box,
   Flex,
   Button,
-  Text,
   IconButton,
   Drawer,
   DrawerBody,
-  DrawerFooter,
-  DrawerHeader,
   DrawerOverlay,
   DrawerContent,
   DrawerCloseButton,
   useDisclosure,
-  CloseButton,
   Center,
 } from "@chakra-ui/react";
 import { useUserContext } from "../context/userContext";
 import { HamburgerIcon } from "@chakra-ui/icons";
 
 export const HeaderBookList = () => {
-  const { logoutUser, user } = useUserContext();
+  const { logoutUser } = useUserContext();
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <Box

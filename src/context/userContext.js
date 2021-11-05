@@ -7,7 +7,7 @@ import {
   updateProfile,
   sendPasswordResetEmail,
 } from "firebase/auth";
-import { auth } from "../firebase";
+import { auth} from "../firebase";
 
 export const UserContext = createContext({});
 
@@ -25,6 +25,7 @@ export const UserContextProvider = ({ children }) => {
     const unsubscribe = onAuthStateChanged(auth, (res) => {
       if (res) {
         setUser(res);
+        console.log(res.uid);
       } else {
         setUser(null);
       }
@@ -72,7 +73,6 @@ export const UserContextProvider = ({ children }) => {
     logoutUser,
     forgotPassword,
   };
-
   return (
     <UserContext.Provider value={contextValue}>{children}</UserContext.Provider>
   );
