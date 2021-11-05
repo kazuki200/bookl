@@ -1,3 +1,40 @@
+# ポートフォリオについて
+
+このBookListを作ろうと思った経緯は、
+
+## 開発環境
+
+- react
+- Chakra Ui
+- emotion
+- firebase
+- fortawesome
+- GitHub
+
+[実装機能](https://www.notion.so/41b24ad3a28a4c39aa8aa3362d9c8821)
+
+## 工夫した点
+
+### Firebaseを使っての認証機能
+
+バックエンドの知識があまりないため、Firebaseでログイン機能やユーザー登録機能を実装した
+
+### Chakra-uiを使ってのUI構築
+
+このUIコンポーネントライブラリを使ってユーザーにとって使いやすいUIを実装
+
+## 課題点
+
+### Typescriptの知識不足
+
+最初はTypescriptを使用していたが、知識不足で今回は途中で使用を断念
+
+### サイトのデザイン
+
+デザインはAdobeを使って制作したが、もっとデザインの知識や、UIの知識が足りないように感じた
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
