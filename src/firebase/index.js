@@ -3,12 +3,12 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "@firebase/firestore";
 
 const firebaseConfig = {
-  apiKey:"AIzaSyAP6Q2LwzPekDnXSJR-xAZq5Qu1vrGI4Oo",
-  authDomain:  "book-ll.firebaseapp.com",
-  projectId:"book-ll",
-  storageBucket:  "book-ll.appspot.com",
-  messagingSenderId: "229545065099",
-  appId: "1:229545065099:web:05ffc380b6d0f3717cb28e",
+  apiKey:"秘密",
+  authDomain:  "秘密",
+  projectId:"秘密",
+  storageBucket:  "秘密",
+  messagingSenderId: "秘密",
+  appId: "秘密",
 };
 
 const app = initializeApp(firebaseConfig);
